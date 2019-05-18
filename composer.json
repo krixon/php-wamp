@@ -1,0 +1,28 @@
+{
+    "name": "krixon/php-wamp",
+    "description": "A modern WAMP implementation for PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Karl Rixon",
+            "email": "karl.rixon@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Krixon\\Wamp\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Krixon\\Wamp\\Tests\\Unit\\": "tests/unit"
+        }
+    },
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.1"
+    }
+}
