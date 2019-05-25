@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+$loop = React\EventLoop\Factory::create();
+
+$stream = new React\Stream\ReadableResourceStream(
+    fopen('./out', 'r'),
+    $loop
+);
+
+$stream->on('data', static function ($data) : void {
+    echo $data;
+});
+
+$loop->run();

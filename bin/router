@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Krixon\Wamp\Peer\Broker;
+use Krixon\Wamp\Peer\Dealer;
+use Krixon\Wamp\Peer\Router;
+use Krixon\Wamp\Transport\SocketServer;
+use React\EventLoop\Factory;
+use React\Socket\Server;
+use React\Socket\LimitingServer;
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+$loop = Factory::create();
+
+$server = new Server($argv[1] ?? 0, $loop, [
+//    'tls' => [
+//        'local_cert' => $argv[2] ?? (__DIR__ . '/localhost.pem')
+//    ]
+]);
+
+$server = new LimitingServer($server, null);
+
+$router = new Router(new Broker(), new Dealer());
+$transport = new SocketServer($server, $router);
+
+echo 'Listening on ' . $server->getAddress() . PHP_EOL;
+
+$loop->run();
