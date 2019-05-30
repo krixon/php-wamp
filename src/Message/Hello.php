@@ -23,4 +23,22 @@ class Hello implements Message
     {
         return 1;
     }
+
+
+    public function __toString() : string
+    {
+        return sprintf('[HELLO, Realm: %s]', $this->realm);
+    }
+
+
+    public function realm() : Uri
+    {
+        return $this->realm;
+    }
+
+
+    public function details() : HelloDetails
+    {
+        return $this->details;
+    }
 }

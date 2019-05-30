@@ -30,6 +30,12 @@ abstract class Numeric
     }
 
 
+    public function __toString() : string
+    {
+        return (string) $this->value;
+    }
+
+
     public function integer() : int
     {
         return $this->value;

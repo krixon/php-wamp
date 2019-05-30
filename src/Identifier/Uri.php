@@ -17,6 +17,12 @@ final class Uri
     }
 
 
+    public function __toString() : string
+    {
+        return $this->value;
+    }
+
+
     /**
      * A Dealer or Broker could not determine if the Peer is authorized to perform a join, call, register, publish
      * or subscribe, since the authorization operation itself failed.

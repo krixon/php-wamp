@@ -23,4 +23,16 @@ class Welcome implements Message
     {
         return 2;
     }
+
+
+    public function sessionId() : SessionId
+    {
+        return $this->sessionId;
+    }
+
+
+    public function details() : WelcomeDetails
+    {
+        return $this->details;
+    }
 }

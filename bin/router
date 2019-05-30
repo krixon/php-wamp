@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 use Krixon\Wamp\Peer\Broker;
 use Krixon\Wamp\Peer\Dealer;
-use Krixon\Wamp\Peer\Router;
+use Krixon\Wamp\Peer\Router\Router;
 use Krixon\Wamp\Transport\SocketServer;
 use React\EventLoop\Factory;
 use React\Socket\Server;

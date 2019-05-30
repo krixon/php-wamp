@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Krixon\Wamp\Transport;
 
-use Krixon\Wamp\Peer\Router;
+use Krixon\Wamp\Peer\Router\Router;
 use Krixon\Wamp\Session\Session;
 use Krixon\Wamp\Session\SessionId;
 

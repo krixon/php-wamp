@@ -6,5 +6,5 @@ namespace Krixon\Wamp\Session;
 
 interface Observer
 {
-    public function onSessionDataReceived(Session $session, string $data);
+    public function onSessionDataReceived(Session $session, string $data) : void;
 }

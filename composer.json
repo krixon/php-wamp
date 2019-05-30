@@ -21,6 +21,9 @@
     },
     "require": {
         "php": ">=7.2",
+        "ext-json": "*",
+        "krixon/state-machine": "^0.1.0",
+        "psr/log": "^1.1",
         "react/event-loop": "^1.1",
         "react/stream": "^1.1",
         "react/socket": "^1.2"
